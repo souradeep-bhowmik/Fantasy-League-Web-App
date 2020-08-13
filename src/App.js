@@ -1,24 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import PlayerDisplay from "./components/PlayerDisplay";
+import Table from 'react-bootstrap/Table';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Table hover responsive align="center">
+        <tbody>
+          <tr>
+            <td colSpan="4"><PlayerDisplay name="Edwin van Der Saar"/></td>
+          </tr>
+          <tr>
+            <td><PlayerDisplay name="Christiano Ronaldo"/></td>
+            <td><PlayerDisplay name="Wayne Rooney"/></td>
+            <td><PlayerDisplay name="Dimitar Berbatov"/></td>
+          </tr>
+          <tr>
+            <td><PlayerDisplay name="Kevin De Bruyne"/></td>
+            <td><PlayerDisplay name="Thiery Henry"/></td>
+            <td colspan="2"><PlayerDisplay name="Robin van Persie"/></td>
+            <td><PlayerDisplay name="Ryan Giggs"/></td>
+          </tr>
+          <tr>
+            <td colspan="2"><PlayerDisplay name="Toni Kroos"/></td>
+            <td colspan="2"><PlayerDisplay name="Robert Lewandowski"/></td>
+          </tr>
+        </tbody>
+      </Table>
     </div>
   );
 }
